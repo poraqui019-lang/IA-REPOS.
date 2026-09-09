@@ -1,11 +1,10 @@
-# Workflow
+# Workflow operacional
 
-1. Entenda o pedido e inspecione as regras do projeto atual.
-2. Consulte `AGENTS.md`, capabilities, catálogo e a skill aplicável.
-3. Reutilize o que já existe quando fizer sentido; mantenha o escopo mínimo.
-4. Implemente sem misturar arquivos, regras ou contexto de projetos diferentes.
-5. Preserve código e layout existentes, salvo mudança estrutural explicitamente necessária.
-6. Teste a alteração antes de concluí-la. Para sites, use automação de navegador quando disponível.
-7. Registre o resultado, a validação e qualquer configuração pendente.
+1. Identifique o projeto atual e leia suas regras locais.
+2. Consulte `AGENTS.md`, `CAPABILITIES.md`, o catálogo e a skill aplicável.
+3. Escolha somente soluções relevantes e reutilize o que já funciona quando apropriado.
+4. Implemente a menor mudança necessária, sem cruzar arquivos ou regras entre projetos.
+5. Preserve código e layout existentes salvo necessidade estrutural explícita.
+6. Teste antes de concluir: para sites, use Agent Browser quando estiver disponível; para vídeo, faça preview ou render com o Video Factory; para deploy e banco, use Vercel e Supabase somente quando aplicáveis e configurados.
+7. Corrija falhas, registre a validação e declare dependências pendentes.
 
-Use Vercel para deploy quando aplicável. Use Supabase para banco e autenticação quando aplicável.

@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+!.env.example
+tools/video-factory/out/
+tools/video-factory/renders/
+tools/video-factory/*.mp4
+tools/video-factory/*.webm
+tools/video-factory/*.mov
+tools/video-factory/.remotion/
+tools/agent-browser/.agent-browser/
+tools/agent-browser/screenshots/
+*.log
+

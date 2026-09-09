@@ -1,0 +1,14 @@
+{
+  "name": "ia-repos-agent-browser",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Instalação local reproduzível do Agent Browser para a central IA-REPOS.",
+  "devDependencies": {
+    "agent-browser": "latest"
+  },
+  "scripts": {
+    "install-browser": "agent-browser install",
+    "test:public": "agent-browser open https://example.com && agent-browser wait --load networkidle && agent-browser snapshot -i && agent-browser close"
+  }
+}
+

@@ -1,16 +1,25 @@
-# Central de instruções
+# IA-REPOS: central de instruções e ferramentas
 
-Este repositório centraliza instruções reutilizáveis para projetos, sem substituir as regras locais de cada um.
+IA-REPOS é uma central de conhecimento e ferramentas; não é motivo para misturar código, arquivos, regras ou contexto entre projetos. Um projeto nunca deve ser alterado porque outro existe.
+
+## Antes de começar uma tarefa
+
+1. Identifique o projeto atual e leia suas instruções específicas.
+2. Consulte [CAPABILITIES.md](CAPABILITIES.md) para o estado real das ferramentas.
+3. Consulte [REPOSITORIES.md](REPOSITORIES.md) se precisar de uma ferramenta ou referência.
+4. Selecione a skill adequada em `skills/`.
+5. Reutilize uma solução existente apenas quando ela for apropriada; não carregue nem use ferramentas irrelevantes.
+6. Execute a mudança com o menor impacto necessário, preserve estrutura e layout existentes e mantenha o projeto isolado.
+7. Teste, corrija falhas e só então conclua.
 
 ## Índice
 
-- [CAPABILITIES.md](CAPABILITIES.md): ferramentas e capacidades disponíveis.
-- [REPOSITORIES.md](REPOSITORIES.md): catálogo de repositórios de referência.
-- [WORKFLOW.md](WORKFLOW.md): fluxo de execução comum.
+- [CAPABILITIES.md](CAPABILITIES.md): estado de ferramentas e integrações.
+- [REPOSITORIES.md](REPOSITORIES.md): catálogo de referências avaliadas.
+- [WORKFLOW.md](WORKFLOW.md): fluxo operacional.
+- [DISCOVERY.md](DISCOVERY.md): descoberta segura.
 - `skills/*/SKILL.md`: instruções por domínio.
+- `tools/`: módulos operacionais reutilizáveis.
 
-## Regra de entrada
+Nunca armazene API keys, tokens, senhas, cookies, credenciais ou arquivos `.env` reais neste repositório.
 
-Antes de criar algo, consulte este índice, as capabilities, os repositórios e a skill relacionada. Reutilize soluções existentes quando forem adequadas; não use uma ferramenta ou repositório apenas porque está disponível.
-
-As regras e arquivos de cada projeto permanecem isolados. Preserve código e layout existentes quando a tarefa não exigir mudança estrutural.
