@@ -5,8 +5,9 @@ IA-REPOS é uma central de conhecimento e ferramentas; não é motivo para mistu
 ## Antes de começar uma tarefa
 
 1. Identifique o projeto atual e leia suas instruções específicas.
-2. Consulte [CAPABILITIES.md](CAPABILITIES.md) para o estado real das ferramentas.
-3. Consulte [REPOSITORIES.md](REPOSITORIES.md) se precisar de uma ferramenta ou referência.
+2. Consulte [CAPABILITIES.md](CAPABILITIES.md) para distinguir conectores do Codex e ferramentas locais.
+3. Prefira um plugin/conector marcado **CONNECTED**; não exija instalação de CLI local quando o conector cumprir a tarefa.
+4. Consulte [REPOSITORIES.md](REPOSITORIES.md) se precisar de uma ferramenta ou referência.
 4. Selecione a skill adequada em `skills/`.
 5. Reutilize uma solução existente apenas quando ela for apropriada; não carregue nem use ferramentas irrelevantes.
 6. Execute a mudança com o menor impacto necessário, preserve estrutura e layout existentes e mantenha o projeto isolado.
@@ -14,7 +15,7 @@ IA-REPOS é uma central de conhecimento e ferramentas; não é motivo para mistu
 
 ## Índice
 
-- [CAPABILITIES.md](CAPABILITIES.md): estado de ferramentas e integrações.
+- [CAPABILITIES.md](CAPABILITIES.md): estado de conectores e ferramentas locais.
 - [REPOSITORIES.md](REPOSITORIES.md): catálogo de referências avaliadas.
 - [WORKFLOW.md](WORKFLOW.md): fluxo operacional.
 - [DISCOVERY.md](DISCOVERY.md): descoberta segura.
@@ -22,4 +23,3 @@ IA-REPOS é uma central de conhecimento e ferramentas; não é motivo para mistu
 - `tools/`: módulos operacionais reutilizáveis.
 
 Nunca armazene API keys, tokens, senhas, cookies, credenciais ou arquivos `.env` reais neste repositório.
-

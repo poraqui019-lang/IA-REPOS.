@@ -1,16 +1,15 @@
 # Capabilities
 
-Estados: **CONNECTED** é uma integração autenticada; **INSTALLED** é um executável presente; **AVAILABLE ON DEMAND** pode ser instalado ou carregado quando necessário; **UNAVAILABLE** ainda não está configurado.
+Esta central separa integrações do Codex de executáveis locais. **Connector status** informa acesso por plugin/conector; **Local CLI status** informa apenas binários instalados neste ambiente. A ausência de CLI não invalida um conector conectado.
 
-| Recurso | Estado real | Evidência da auditoria | Uso |
-| --- | --- | --- | --- |
-| GitHub | CONNECTED | Conector autorizado: leitura e escrita confirmadas em `poraqui019-lang/IA-REPOS.` | Repositórios, commits e push. |
-| Vercel | UNAVAILABLE | `vercel --version`: comando ausente | Deploy quando CLI ou integração for configurada. |
-| Supabase | UNAVAILABLE | `supabase --version`: comando ausente | Banco e auth quando integração ou CLI for configurada. |
-| Figma | UNAVAILABLE | Nenhum conector/plugin exposto nesta sessão | Referência de design após conexão. |
-| Agent Browser | AVAILABLE ON DEMAND | Pacote local reprodutível em `tools/agent-browser`; instalação bloqueada por TLS do registry neste ambiente | Automação e validação de navegador. |
-| Remotion | AVAILABLE ON DEMAND | Módulo em `tools/video-factory`; instalação bloqueada por TLS do registry neste ambiente | Engine do Video Factory. |
-| Video Factory | AVAILABLE ON DEMAND | Estrutura e composição inicial presentes; render depende da instalação do Remotion | Vídeo vertical programático. |
+| Recurso | Tipo | Connector status | Local CLI status | Uso |
+| --- | --- | --- | --- | --- |
+| GitHub | Plugin/Connector | CONNECTED | N/A | Repositórios, leitura, escrita, commits e push. |
+| Vercel | Plugin/Connector | CONNECTED | NOT INSTALLED | Projetos, deploys e logs pelo conector; use CLI somente quando necessária. |
+| Supabase | Plugin/Connector | CONNECTED | NOT INSTALLED | Banco, auth e recursos pelo conector; use CLI somente quando necessária. |
+| Figma | Plugin/Connector | NOT CONNECTED | N/A | Referência de design quando um conector Figma for disponibilizado. |
+| Agent Browser | Local Tool | N/A | AVAILABLE ON DEMAND | Automação e validação via `tools/agent-browser`. |
+| Remotion | Local Tool | N/A | AVAILABLE ON DEMAND | Engine de vídeo instalada sob demanda no Video Factory. |
+| Video Factory | Local Module | N/A | AVAILABLE ON DEMAND | Módulo próprio em `tools/video-factory`. |
 
-Consulte o estado antes de escolher uma ferramenta. Não introduza uma tecnologia apenas porque ela está catalogada.
-
+Quando houver plugin/conector **CONNECTED**, prefira-o. Não exija nem instale uma CLI local apenas para replicar uma operação que o conector já realiza.

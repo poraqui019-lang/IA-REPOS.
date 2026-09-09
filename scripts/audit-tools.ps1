@@ -27,14 +27,14 @@ if ($agent) {
 } elseif (Test-Path "$PSScriptRoot/../tools/agent-browser/node_modules/.bin/agent-browser.cmd") {
   Write-Status 'Agent Browser' 'AVAILABLE ON DEMAND' 'Local dependency installed; use npm run install-browser'
 } else {
-  Write-Status 'Agent Browser' 'NOT INSTALLED' 'Run npm install in tools/agent-browser'
+  Write-Status 'Agent Browser' 'AVAILABLE ON DEMAND' 'Local manifest present; run npm install in tools/agent-browser'
 }
 
 $remotion = "$PSScriptRoot/../tools/video-factory/node_modules/.bin/remotion.cmd"
 if (Test-Path $remotion) {
   Write-Status 'Remotion' 'INSTALLED' (& $remotion --version 2>$null | Select-Object -First 1)
 } else {
-  Write-Status 'Remotion' 'NOT INSTALLED' 'Run npm install in tools/video-factory'
+  Write-Status 'Remotion' 'AVAILABLE ON DEMAND' 'Local manifest present; run npm install in tools/video-factory'
 }
 
 foreach ($name in @('vercel', 'supabase')) {
@@ -42,13 +42,8 @@ foreach ($name in @('vercel', 'supabase')) {
   if ($command) {
     Write-Status $name 'INSTALLED' (& $command.Source --version 2>$null | Select-Object -First 1)
   } else {
-    Write-Status $name 'NOT INSTALLED' 'CLI not found'
+    Write-Status $name 'NOT INSTALLED' 'CLI not found; check CAPABILITIES.md for connector status'
   }
 }
 
-if ($env:IA_REPOS_GITHUB_CONNECTED -eq 'true') {
-  Write-Status 'GitHub' 'CONNECTED' 'Confirmed by configured connector'
-} else {
-  Write-Status 'GitHub' 'AVAILABLE ON DEMAND' 'Connector state is not readable from a shell'
-}
-Write-Status 'Figma' 'UNAVAILABLE' 'No Figma connector or plugin detected by this shell audit'
+Write-Status 'Connector state' 'NOT APPLICABLE' 'Check CAPABILITIES.md; shell audits cannot inspect Codex plugins/connectors'
