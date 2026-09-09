@@ -11,5 +11,6 @@ Esta central separa integrações do Codex de executáveis locais. **Connector s
 | Agent Browser | Local Tool | N/A | AVAILABLE ON DEMAND | Automação e validação via `tools/agent-browser`. |
 | Remotion | Local Tool | N/A | AVAILABLE ON DEMAND | Engine de vídeo instalada sob demanda no Video Factory. |
 | Video Factory | Local Module | N/A | AVAILABLE ON DEMAND | Módulo próprio em `tools/video-factory`. |
+| MoneyPrinterTurbo | External Repository | N/A | AVAILABLE ON DEMAND | Automação rápida de vídeos curtos; requer ambiente Python e pode exigir APIs configuradas pelo usuário. |
 
 Quando houver plugin/conector **CONNECTED**, prefira-o. Não exija nem instale uma CLI local apenas para replicar uma operação que o conector já realiza.

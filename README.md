@@ -50,6 +50,10 @@ npm run render:test
 
 Os renders vão para `out/` e não entram no Git. Novas composições reutilizáveis ficam em `templates/`; assets e áudio ficam em `assets/`.
 
+## Escolha de workflow de vídeo
+
+Consulte primeiro `skills/video/SKILL.md`. Use **MoneyPrinterTurbo** para automação rápida de Shorts, Reels e TikTok a partir de tema, roteiro ou palavras-chave. Use **Remotion / Video Factory** quando assets precisarem ser preservados, houver controle preciso de cenas, edição quadro a quadro ou produto visualmente imutável. MoneyPrinterTurbo é um repositório externo disponível sob demanda e não é copiado para esta central.
+
 ## Como expandir
 
 Ao adicionar um repositório, registre nome, URL, categoria, finalidade, quando usar, quando não usar, dependências e status em `REPOSITORIES.md`. Ao adicionar uma skill, crie `skills/<nome>/SKILL.md` com frontmatter `name` e `description`, instruções focadas e validação aplicável.
